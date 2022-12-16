@@ -1,0 +1,169 @@
+React Js:
+Websites can be high performing
+
+
+Components
+Props
+State > Lifecycle methods and events
+
+ES6
+1)
+let > Block scoped. Let cannot be redeclared. When redefined in new scope it is a new varibale. When used in for loop outside varibales are not impacted. Cannot be used first and then declared.
+var > Function scoped. var can be redeclared. When used in loop it changes the outside value as well. Can be used first and then declared.
+
+
+2)
+function printMe() {
+console.log("I am amit");
+}
+
+Funcation as variable
+var fun = () => {
+console.log("I am amit");
+}
+
+fun();
+
+var addMe = (score, addup) => score + addup;
+
+console.log(addMe(30, 10));
+
+3)
+function crazy() {
+console.log(this); // this issue in previous 
+}
+
+var button = document.getElementByID("me");
+button.addEventListener('click', crazy);
+
+4)
+const name = 'Sara';
+
+JavaScript Classes
+
+5) 
+JavaScript Template Literals : console.log(`Hello ${first_name} ${last_name}`);
+
+6) 
+JavaScript Destructuring
+The destructuring syntax makes it easier to assign values to a new variable. For example
+
+7) 
+dynamic object creation:
+
+let myObj = {
+
+user: 'john',
+score:200,
+angry: 99,
+highScore() {
+console.log("hello");
+}
+};
+const person = {
+    name: 'Sara',
+    age: 25,
+    gender: 'female'    
+}
+
+let { name, age, gender } = person;
+
+console.log(name); // Sara
+console.log(age); // 25
+console.log(gender); // female
+
+8) 
+for of loop
+
+letcars = ['bmw', 'audi', 'nano']
+for(let car of cars) {
+
+}
+
+9)
+super dots ... [Convert List to array and array to list ]
+JavaScript Promises
+
+10) Import and export of variable s and functions from a .js file to other js file.
+
+11) Maps : Key value
+
+let map = new Map();
+
+let obj1 = {
+	name: 'oo',
+	power: '11'
+}
+map.set('00', obj1);
+console.log(map.size);
+map.get('00');
+map.keys();
+map.entries();
+
+12) Set : Unique values
+
+let set = new Set(['Batman', 'Flash', 'Batman']);
+set.add('Man');
+set.has('Man');
+
+13) static, getter and setter methods.
+
+class Driver {
+	
+	constructor(name) {
+		this._name = name;
+	}
+	
+	static myfunction() {
+		console.log("my static function");
+	}
+	
+	get myname() {
+		return this._name;
+	}
+	
+	set myname(val) {
+		this._name = val;
+	}
+	
+}
+
+
+Driver.myfunction() // static call
+
+let driver  new Driver("john");
+
+driver.myname = 'johhny';
+
+14) Symbols
+
+15) Classes
+
+class Marvel {
+
+myMethod() {   // When functions are inside classes, then we do not use function before the method name.
+	console.log("hiii");  
+}
+
+}
+
+16)
+Promises are used to handle asynchronous tasks. For example,
+
+// returns a promise
+let countValue = new Promise(function (resolve, reject) {
+   reject('Promise rejected'); 
+});
+
+// executes when promise is resolved successfully
+countValue.then(
+    function successValue(result) {
+        console.log(result); // Promise resolved
+    },
+ )
+ 
+ 
+//create react app globally 
+npm install -g create-react-app
+npm install tar@6 -g
+create-react-app <project name>

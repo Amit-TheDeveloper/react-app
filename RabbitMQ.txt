@@ -1,0 +1,34 @@
+Rabbit MQ:
+
+It is a message broker. Look at it as a Postal service.
+Implements multiple protocols. 
+One of them is AMQP(Advanced message queuing protocol)
+
+Producer(Produces message and send to exchange with a routing key) > 
+Exchange(Based on Routing key message is forwarded to correct queue) >
+Queue(Message lies in the queue) > 
+Consumer(Reads the message from the queue)
+
+1) Producer Code:
+RabbitTemplate.convertAndSend(Exchange, Routingkey, messageObjectToSend);
+
+2) Configuration:
+Map Queue to Exchange.
+Queue, TopicExchange, BindingBuilder(Bind Queue to exchange with a routing key.)
+
+3) Consumer Code:
+@RabbitListener(queues = "Bound to QueueName")
+public void methodConsumingMessage(messageObjectFromQueue){
+//consume and process message from queue
+}
+
+
+
+Apache Kafka:
+Event-based streaming platform
+A unique combination of pub/sub messaging, data processing, data integration, and storage in a single framework
+A unique combination of pub/sub messaging, data processing, data integration, and storage in a single framework
+True decoupling between producers and consumers because of its storage component makes it the de facto standard for microservice architectures
+
+Apache Camel
+Enterprise Integration tool and should be compared to ESB tools
