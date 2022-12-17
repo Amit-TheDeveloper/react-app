@@ -1,10 +1,24 @@
-React Js:
+React Js: Javascript library 
 Websites can be high performing
 
 
 Components
-Props
-State > Lifecycle methods and events
+Props > Pass values from one component to other component through properties.
+App.propTypes = {
+}
+
+App.defaultProps = {
+}
+State >  and events
+
+component Lifecycle methods:
+componentDidMount(){}
+componentWill Mount() {}
+componentWillReceiveProps(newProps){}
+shouldComponentUpdate(newProps, nextState){}
+componentWillUpdate(newProps, nextState){}
+componentDidUpdate(newProps, nextState){}
+componentWillUnmount() {}
 
 ES6
 1)
@@ -75,7 +89,7 @@ console.log(gender); // female
 8) 
 for of loop
 
-letcars = ['bmw', 'audi', 'nano']
+let cars = ['bmw', 'audi', 'nano']
 for(let car of cars) {
 
 }
@@ -167,3 +181,77 @@ countValue.then(
 npm install -g create-react-app
 npm install tar@6 -g
 create-react-app <project name>
+
+
+Creating react app manually:
+
+1) create Project directoy
+mkdir Project-5
+2) create basic directory inside Project-5
+cd Project-5
+mkdir basic
+3) cd basic
+npm init -Y
+//package.json is created.
+4) npm i -S react            //-S Save  or we can use -D, -i = Install
+5) npm i -S react-dom        // we need to install react and react-dom
+6) npm i -D webpack    // -D dev/developemnt dependency not required on server. webpack(Will create bundle.js which contains all of the code)
+7) npm i -D babel-core      // to convert ES6 code in understandable javascript
+8) npm i -D babel-loader
+9) npm i -D babel-preset-react
+10)npm i -D babel-preset-es2015
+11) touch webpack.config.js    // touch is to create file. files are created in basic directory
+12) touch index.html
+13) mkdir src
+14) touch src/App.js
+15) update webpack.config.js by copy pasting from existing file. Verify it is correct or any modification required.
+16) update app.js as below
+
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends Components {
+render() {
+	return(
+		<div>
+		 <h2>Cool react App</h2>
+		<div>
+	)
+}
+}
+ReactDOM.render(<App/>, document.getElementByID('root'));   // Mention where to render the App component. In the root div of inde.html
+17) update index.html to include App.js
+
+<html>
+<head> </head>
+<body>
+<div id = "root"></div>
+</body>
+</html
+
+18) npm install -g webpack     // install webpack inside the root directory where package.json exists. This is to be run even when webpack was installed globally.
+
+19) webpack -w  // to run in watch mode. If any issue apears then check the configurations are correct.
+
+20) update the <body> tag of index.html with <script tag> pointing to bundle.js
+<body>
+<div id = "root"></div>
+<script type = "text/javascript" src="build/bundle.js"></script>
+</body>
+
+
+
+react router dom
+npm install --save react-router
+
+Auto0 tokens
+npm package axios for api requests.
+
+rudon 
+
+
+
+
+ 
+
+
